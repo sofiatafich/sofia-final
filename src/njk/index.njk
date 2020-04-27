@@ -1,16 +1,47 @@
 {% extends '_layouts/base.njk' %}
 
-{% block page_title %}New index page title{% endblock %}
+{% block page_title %}QUEEN{% endblock %}
 
-{% block page_description %}The search description for this page goes here.{% endblock %}
+{% block page_description %}Official site.{% endblock %}
 
 {% block content %}
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Main headline</h1>
-      <p>This is a <a href="detail-entry-example.html">link to a blog entry example</a> which shows a simple detail entry page example. It uses the "data-entry.njk" layout.</p>
-      <p>This is a <a href="detail-book-shipping-news.html">link to a book page example</a> which uses a more complex detail layout (detail-book.njk) where data is pulled into the layout and the page calls for a specific row in the data.</p>
+      <h2>Band Members</h2>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Freddie Mercury</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="freddie-mercury.html" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Brian May</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="brian-may.html" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Roger Taylor</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="roger-taylor.html" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">John Deacon</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="john-deacon.html" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      <h2>Discography</h2>
       <ul> 
         {% for book in data.books %}
           <li>{{ book.title }}, {{ book.author }}</li>
