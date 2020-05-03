@@ -6,8 +6,18 @@
         <div class="col-sm-4">
             {% block info %}
                 <h1>{{ members.name }}</h1>
+                <img src="{{ members.imagebw }}" class="mg-fluid">
             {% endblock %}
         </div>
+    </div>
+        <div class="col-sm-8">
+        {% block story %}
+            <p>{{ members.instruments}}</p>
+            <p>{{ members.tenure}}</p>
+            <p>{{ members.birthplace}}</p>
+            <p>{{ members.birthdate}}</p>
+            {{ members.text | safe}}
+        {% endblock %}
     </div>
 </article>
 {% endblock %}

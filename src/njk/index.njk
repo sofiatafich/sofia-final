@@ -1,5 +1,9 @@
 {% extends '_layouts/base.njk' %}
 
+{% set members = queen.members[0] %}
+
+{% set discography = queen.discography[0] %}
+
 {% block page_title %}QUEEN{% endblock %}
 
 {% block page_description %}Official site.{% endblock %}
@@ -8,49 +12,28 @@
 <div class="container">
   <h2>Band Members</h2>
     <div class="row">
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Freddie Mercury</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="freddie-mercury.html" class="btn btn-primary">Go somewhere</a>
-          </div>
+      <div class="card" style="width: 60rem;">
+        {% for members in queen.members %}
+        <img src="{{ members.image}}" class="card-img-left" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ members.name }}</h5>
+          <p class="card-text">{{ members.instruments}}.</p>
+          <a href="{{ members.slug }}.html" class="btn btn-primary">Read more</a>
         </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Brian May</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="brian-may.html" class="btn btn-primary">Go somewhere</a>
-          </div>
+        {% endfor %}
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Roger Taylor</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="roger-taylor.html" class="btn btn-primary">Go somewhere</a>
-          </div>
+  <h2>Discography</h2>
+    <ul class="list-unstyled">
+      <li class="media">
+        {% for discography in queen.discography %}
+        <img src="../img/{{ discography.image }}" class="mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0">{{ discography.title }}</h5>
+          {{ discography.year }}.
         </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">John Deacon</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="john-deacon.html" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-  <div class="row">
-      <h2>Discography</h2>
-      <ul> 
-      </ul>
-  </div>
+        {% endfor %}
+      </li>
+    </ul>
 </div>
 {% endblock %}
