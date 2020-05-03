@@ -2,9 +2,19 @@
     background: url(../img/queen-band-wallpaper.jpg) no-repeat center;
     background-size: cover;
     color: white;
-    padding-top: 12rem
+    padding-top: 12rem;
+    text-align: right;
   }
   
   .jumbotron {
     margin-bottom: 30px;
+
+    h1 {
+      font-family: 'Mrs Saint Delafield', cursive;
+      font-size: 80px;
+    }
+    p {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
   }
+

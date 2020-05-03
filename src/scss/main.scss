@@ -18,10 +18,31 @@
 // @import "../../node_modules/bootstrap/scss/variables";
 // @import "../../node_modules/bootstrap/scss/mixins"; 
 
+// Google font
+@import url('https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield&display=swap');
+
 // Import partials
 @import "nav";
 @import "jumbotron";
 
+h1, h2 {
+    font-family: 'Mrs Saint Delafield', cursive;
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-size: 80px;
+}
+
 h2 {
+    font-size: 60px;
     padding-top: 20px;
+}
+
+h3, h4, h5, h6, p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.media-body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
