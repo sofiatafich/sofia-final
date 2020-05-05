@@ -12,28 +12,24 @@
 <div class="container">
   <h2>Band Members</h2>
     <div class="row">
-      <div class="card" style="width: 60rem;">
-        {% for members in queen.members %}
-        <img src="{{ members.image}}" class="card-img-left" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ members.name }}</h5>
-          <p class="card-text">{{ members.instruments}}.</p>
-          <a href="{{ members.slug }}.html" class="btn btn-primary">Read more</a>
+      {% for members in queen.members %}
+        <div class="card">
+          <img src="img/members/{{ members.image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ members.name }}</h5>
+            <p class="card-text">{{ members.instruments}}.</p>
+            <a href="{{ members.slug }}.html" class="btn btn-primary">Read more</a>
+          </div>
         </div>
-        {% endfor %}
-      </div>
+      {% endfor %}
     </div>
   <h2>Discography</h2>
-    <ul class="list-unstyled">
-      <li class="media">
-        {% for discography in queen.discography %}
-        <img src="../img/{{ discography.image }}" class="mr-3" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0">{{ discography.title }}</h5>
-          {{ discography.year }}.
+    <div class="row">
+      {% for discography in queen.discography %}
+        <div class="col">
+          <img src="img/discs/{{ discography.image }}" class="image-fluid" alt="...">
+          <h5>{{ discography.title }}, {{ discography.year }}</h5>
         </div>
-        {% endfor %}
-      </li>
-    </ul>
-</div>
+      {% endfor %}
+    </div>
 {% endblock %}
