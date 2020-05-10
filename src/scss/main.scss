@@ -27,18 +27,42 @@
 
 h1, h2 {
     font-family: 'Mrs Saint Delafield', cursive;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 h1 {
     font-size: 80px;
+    padding-top: 20px
 }
 
 h2 {
     font-size: 60px;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 h3, h4, h5, h6, p {
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h5 {
+    padding-top: 10px;
+}
+
+.col {
+    padding-bottom: 20px;
+}
+
+.card {
+    width: 250px;
+    margin: 10px
+}
+
+.btn {
+    background-color: grey;
+    border-color: grey;
+}
+
+.btn:hover {
+    background-color: black;
+    border-color: black;
 }
